@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+<h2>Enligt mig är detta det bästa (högst temperatur) vädret i Liljeholmen om ca 24h</h2>
+<form th:action="@{/weather}" method="get"></form>
+
+<p th:text="${bestweather}"></p>
+
+
+</body>
+</html>
