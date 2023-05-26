@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Weather</title>
 </head>
 <body>
 <h2>Enligt mig är detta det bästa (högst temperatur) vädret i Liljeholmen om ca 24h</h2>
-<form th:action="@{/weather}" method="get"></form>
+<form th:action="@{/weather}" method="get"></form></br>
 
-<p th:text="${bestweather}"></p>
+<h3>Av SMHI, Met och OpenMeteo anges den högsta temperaturen av:</h3>
+<p><b>Källa: </b><span th:text="${bestweather.origin}"></span></p>
+
+<p><b>Temperatur: </b><span th:text="${bestweather.temp}"></span></p>
+<p><b>Relativ fuktighet: </b><span th:text="${bestweather.humidity}"></span></p>
+<p><b>Vindhastighet: </b><span th:text="${bestweather.windspeed}"></span></p>
+<p><b>Dag och tid: </b><span th:text="${bestweather.time}"></span></p>
 
 
 </body>

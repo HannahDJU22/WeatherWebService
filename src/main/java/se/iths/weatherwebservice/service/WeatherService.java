@@ -24,10 +24,6 @@ public class WeatherService {
         MyWeather met = metClientRepository.getMetWeather();
         MyWeather openM = openMeteoClientRepository.getOpenMWeather();
 
-        //System.out.println(smhi);
-        //System.out.println(met);
-        //System.out.println(openM);
-
         if (smhi.getTemp() >= met.getTemp() && smhi.getTemp() >= openM.getTemp()){
             return smhi;
         }
